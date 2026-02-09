@@ -1,0 +1,168 @@
+body {
+    background: #F4F5F5;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-primary {
+    margin: 32px;
+    padding: 16px 96px;
+    border: none;
+    border-radius: 48px;
+    background: #2EA9BC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: Roboto;
+    text-align: center;
+}
+
+.btn-back {
+    margin: 32px 64px 32px 96px;
+    border: none;
+    background-color: transparent;
+    color: #2EA9BC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Roboto";
+}
+
+.primary-text {
+    margin: 64px;
+    color: #2EA9BC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    font-family: "Roboto";
+}
+
+.warning {
+    color: #BC412E;
+    font-weight: bold;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+    color: #313131;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: "Roboto";
+}
+
+.sub-title {
+    margin: 48px 0px 32px;
+    color: #313131;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "Roboto";
+}
+
+.main.container {
+    padding-top: 80px;
+}
+
+.progress-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 48px 0px 32px 0px;
+}
+
+label {
+    font-family: "Roboto";
+    font-size: 16px;
+    width: 100%;
+}
+
+th {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: "Roboto";
+    width: 40%;
+}
+
+td {
+    width: 400px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Roboto";
+}
+
+select {
+    display: block;
+    width: 100%;
+    height: 2.8rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 2.8rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input[type=radio]:checked {
+    background-color: #2EA9BC;
+    border-color: #2EA9BC;
+}
+
+input[type=radio] {
+    width: 1em;
+    height: 1em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, .25);
+    appearance: none;
+    border-radius: 50%;
+    position: relative;
+    margin: 0.25rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+table {
+    background-color: white;
+}
+
+.caption {
+    font-family: "Roboto";
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.app-header {
+    background-color: white;
+}

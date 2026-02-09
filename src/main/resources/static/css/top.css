@@ -1,0 +1,88 @@
+.jumbotron {
+    height: 40vh;
+    background-image: url("/img/top.webp");
+    background-position:left 0 top 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.company-name {
+    position: static;
+    margin: 10vh 0 0 10vw;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    font-family: "Roboto";
+}
+
+.bland-message {
+    margin-left: 10vw;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Roboto";
+}
+
+.box-text {
+    display:inline-block;
+    width: 250px;
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    color: #313131;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    outline: 0.5rem solid #313131;
+    outline-offset: 0.5rem;
+    outline-width: 5px;
+}
+
+.service-section {
+    background-color: #2EA9BC;
+    color: #FFFFFF;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.service-point-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-top: 32px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: "Roboto";
+}
+
+.service-point-subtitle {
+    margin-bottom: 16px;
+}
+
+.service-point-row {
+    display: flex;
+    justify-content: center;
+}
+
+.service-point {
+    margin: 16px;
+}
+
+.service-point img {
+    width: 300px;
+    height: 200px;
+    display: block;
+}
+
+.service-point p {
+    margin-top: 32px;
+    margin-bottom: 0;
+}

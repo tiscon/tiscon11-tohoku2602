@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>お見積り情報入力</title>
+  <div th:replace="common/css :: css"></div>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div th:replace="common/header :: header"></div>
+  <div class="container">
+    <form action="/confirm" class="form-horizontal" method="post" th:object="${userOrderForm}">
+      <div class="progress-icon">
+        <img th:src="@{/img/progress_input.svg}" alt="進捗状況" />
+      </div>
+      <div class="page-title">お見積り情報入力</div>
+
+      <div class="col-sm-12">
+        <fieldset>
+          <h2 class="sub-title">保険種別</h2>
+          <div class="form-group">
+            <label>
+              保険の選択
+              <select name="insuranceType" th:field="*{insuranceType}">
+                <option th:each="item : ${insurances}" th:value="${item.insuranceType}"
+                  th:text="${item.insuranceName}"></option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <h2 class="sub-title">ご本人について</h2>
+          <label>
+            氏名
+            <input type="text" name="kanjiName" th:field="*{kanjiName}" />
+          </label>
+          <label>
+            シメイ（フリガナ）
+            <input type="text" name="kanaName" th:field="*{kanaName}" />
+          </label>
+          <label>
+            生年月日
+            <input type="text" name="dateOfBirth" th:field="*{dateOfBirth}" />
+          </label>
+          <label>
+            住所
+            <input type="text" name="address" th:field="*{address}" />
+          </label>
+          <label>
+            電話番号
+            <input type="text" name="tel" th:field="*{tel}" />
+          </label>
+          <label>
+            メールアドレス
+            <input type="text" name="email" th:field="*{email}" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <h2 class="sub-title">お勤め先・ご家族について</h2>
+          <h3 class="caption">配偶者有無</h3>
+          <div th:each="item : ${marriedTypes}">
+            <label>
+              <input type="radio" name="marriedType" th:value="${item.marriedType}" th:field="*{marriedType}" />
+              <span th:text="${item.marriedName}"></span>
+            </label>
+          </div>
+          <h3 class="caption">ご職業</h3>
+          <div th:each="item : ${jobTypes}">
+            <label>
+              <input type="radio" name="jobType" th:value="${item.jobType}" th:field="*{jobType}" />
+              <span th:text="${item.jobName}"></span>
+            </label>
+          </div>
+          <label class="caption">
+            昨年の所得（万円）
+            <input type="text" name="income" th:field="*{income}" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <h2 class="sub-title">ご病歴について</h2>
+          <div class="form-group">
+            <h3 class="caption">過去5年以内に、病気やケガで7日間以上にわたって医師の診察・検査・治療・投薬をうけたことがありますか</h3>
+            <div th:each="item : ${treatedTypes}">
+              <label>
+                <input type="radio" name="treatedType" th:value="${item.treatedType}"
+                  th:field="*{treatedType}" />
+                <span th:text="${item.treatedName}"></span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>
+              「はい」 を選んだ方は内容をご記入下さい
+              <input type="text" name="medicalHistory" th:field="*{medicalHistory}" />
+            </label>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <div class="text-center">
+            <a class="btn btn-back" th:href="@{/}" role="button">TOPへ戻る</a>
+            <button type="submit" class="btn btn-primary">ご入力内容の確認へ</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div th:replace="common/scripts :: scripts"></div>
+</body>
+
+</html>

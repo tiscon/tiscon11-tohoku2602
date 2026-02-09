@@ -1,0 +1,20 @@
+{
+    "java.server.launchMode": "Standard",
+    "editor.inlayHints.enabled": "off",
+    "[java]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.formatOnSave": true,
+    },
+    "java.compile.nullAnalysis.mode": "disabled",
+    "[html]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.indentSize": 2
+    },
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "files.encoding": "utf8"
+}

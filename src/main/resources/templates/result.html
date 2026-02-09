@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>概算お見積もり結果</title>
+  <div th:replace="common/css :: css"></div>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div th:replace="common/header :: header"></div>
+  <div class="container">
+    <form action="/order" class="form-horizontal" method="post" th:object="${userOrderForm}">
+      <div class="progress-icon">
+        <img th:src="@{/img/progress_result.svg}" alt="進捗状況" />
+      </div>
+      <div class="page-title">あなたの保険料（年額）</div>
+      <div class="col-sm-12">
+        <div class="text-center">
+          <div class="primary-text"><span th:text="${estimateResult.annualFee}"></span>円</div>
+          <div>
+            詳細見積もり依頼は無料です。<br>
+            依頼完了後、電話番号へ数日以内にお電話させていただきます。<br>
+            ただし、混雑状況によっては、お電話させていただくまで、<br>
+            お時間をいただく場合がございます。<br>
+            ご了承ください。<br>
+            ご不明点がある場合は、下記のお問い合わせまでご連絡ください。<br>
+            お問い合わせ：000-0000-0000<br>
+            受付時間：平日9:00-18:00<br>
+          </div>
+          <button type="submit" name="proceed" class="btn btn-primary">詳細見積もり依頼へ</button>
+        </div>
+        <div class="col-sm-12">
+          <h2 class="sub-title">保険種別</h2>
+          <table class="table table-bordered">
+            <col span="1">
+            <col span="2">
+            <tbody>
+              <tr>
+                <th>保険の選択</th>
+                <td>
+                  <span th:text="${insuranceName}"></span>
+                </td>
+                <input type="hidden" name="insuranceType" th:value="*{insuranceType}" />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-12">
+          <h2 class="sub-title">ご本人について</h2>
+          <table class="table table-bordered">
+            <col span="1">
+            <col span="2">
+            <tbody>
+              <tr>
+                <th>氏名</th>
+                <td>
+                  <span th:text="*{kanjiName}"></span>
+                </td>
+                <input type="hidden" name="kanjiName" th:value="*{kanjiName}" />
+              </tr>
+              <tr>
+                <th>シメイ（フリガナ）</th>
+                <td><span th:text="*{kanaName}"></span></td>
+                <input type="hidden" name="kanaName" th:value="*{kanaName}" />
+              </tr>
+              <tr>
+                <th>生年月日</th>
+                <td><span th:text="*{dateOfBirth}"></span></td>
+                <input type="hidden" name="dateOfBirth" th:value="*{dateOfBirth}" />
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td><span th:text="*{address}"></span></td>
+                <input type="hidden" name="address" th:value="*{address}" />
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><span th:text="*{tel}"></span></td>
+                <input type="hidden" name="tel" th:value="*{tel}" />
+              </tr>
+              <tr>
+                <th>メールアドレス</th>
+                <td><span th:text="*{email}"></span></td>
+                <input type="hidden" name="email" th:value="*{email}" />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-12">
+          <h2 class="sub-title">お勤め先・ご家族について</h2>
+          <table class="table table-bordered">
+            <col span="1">
+            <col span="2">
+            <tbody>
+              <tr>
+                <th>配偶者有無</th>
+                <td><span th:text="${marriedName}"></span></td>
+                <input type="hidden" name="marriedType" th:value="*{marriedType}" />
+              </tr>
+              <tr>
+                <th>ご職業</th>
+                <td><span th:text="${jobName}"></span></td>
+                <input type="hidden" name="jobType" th:value="*{jobType}" />
+              </tr>
+              <tr>
+                <th>昨年の所得（万円）</th>
+                <td><span th:text="*{income}"></span></td>
+                <input type="hidden" name="income" th:value="*{income}" />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-12">
+          <h2 class="sub-title">ご病歴について</h2>
+          <table class="table table-bordered">
+            <col span="1">
+            <col span="2">
+            <tbody>
+              <tr>
+                <th>過去5年以内に、病気やケガで7日間以上にわたって医師の診察・検査・治療・投薬をうけたことがありますか</th>
+                <td><span th:text="${treatedName}"></span></td>
+                <input type="hidden" name="treatedType" th:value="*{treatedType}" />
+              </tr>
+              <tr>
+                <th>「はい」 を選んだ方は内容をご記入下さい</th>
+                <td><span th:text="*{medicalHistory}"></span></td>
+                <input type="hidden" name="medicalHistory" th:value="*{medicalHistory}" />
+              </tr>
+            </tbody>
+          </table>
+          <div class="form-group">
+            <div class="text-center">
+              <button type="submit" name="backToConfirm" class="btn btn-back">確認画面へ戻る</button>
+            </div>
+          </div>
+        </div>
+    </form>
+  </div>
+  <div th:replace="common/scripts :: scripts"></div>
+</body>
+
+</html>

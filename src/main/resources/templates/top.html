@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Top画面</title>
+  <div th:replace="common/css :: css"></div>
+  <link rel="stylesheet" th:href="@{/css/top.css}">
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div th:replace="common/header :: header"></div>
+  <div class="jumbotron">
+    <div class="company-name">tiscon insurance company</div>
+    <div class="bland-message">未来の景色に鮮やかな彩りを</div>
+  </div>
+  <div>
+    <div class="page-title">3ステップで簡単料金シミュレーション</div>
+    <div class="text-center">
+      <div class="box-text">お見積り情報<br />入力</div>
+      <div class="box-text">ご入力内容の<br />確認</div>
+      <div class="box-text">お見積もり<br />概算料金を算出</div>
+    </div>
+  </div>
+  <div class="text-center">
+    <a class="btn btn-primary" th:href="@{/start}" role="button">簡単無料見積もりをする</a>
+  </div>
+  <div class="service-section">
+    <h1 class="service-point-title">Service</h1>
+    <p class="service-point-subtitle">tiscon insurance companyは豊富な保証・サービスでお客様に安心を届けます。
+    </p>
+    <div class="service-point-row">
+      <div class="service-point">
+        <img th:src="@{/img/service1.webp}" alt="service1" />
+        <p>加入時の保険料から生涯変わらない</p>
+      </div>
+      <div class="service-point">
+        <img th:src="@{/img/service2.webp}" alt="service2" />
+        <p>入院・手術などを一生涯保証</p>
+      </div>
+      <div class="service-point">
+        <img th:src="@{/img/service3.webp}" alt="service3" />
+        <p>日帰り入院でも一時金支給</p>
+      </div>
+    </div>
+    <div class="service-point-row">
+      <div class="service-point">
+        <img th:src="@{/img/service4.webp}" alt="service4" />
+        <p>七大生活習慣病を手厚く保証</p>
+      </div>
+      <div class="service-point">
+        <img th:src="@{/img/service5.webp}" alt="service5" />
+        <p>1000種類以上の手術に対応</p>
+      </div>
+      <div class="service-point">
+        <img th:src="@{/img/service6.webp}" alt="service6" />
+        <p>先進医療は通算2000万円まで保証</p>
+      </div>
+    </div>
+    <div class="service-point-row">
+      <div class="service-point">
+        <img th:src="@{/img/service7.webp}" alt="service7" />
+        <p>医療サポートをご用意<br>
+          24時間いつでも電話可能</p>
+      </div>
+      <div class="service-point">
+        <img th:src="@{/img/service8.webp}" alt="service8" />
+        <p>ネットで簡単お申込み</p>
+      </div>
+      <div class="service-point">
+        <img th:src="@{/img/service9.webp}" alt="service9" />
+        <p>サイトからの詳細見積もり依頼で<br>
+          割引</p>
+      </div>
+    </div>
+  </div>
+  <div th:replace="common/scripts :: scripts"></div>
+</body>
+
+</html>
